@@ -1,26 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import uppy from './uppy';
+import '@uppy/core/dist/style.css'
+import '@uppy/dashboard/dist/style.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    useEffect(() => {
+        uppy()
+    })
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <form className="DashboardContainer">
+                    <button className="UppyModalOpenerBtn">
+                        Upload
+                    </button>
+                </form>
+            </header>
+        </div>
+    );
 }
 
 export default App;
