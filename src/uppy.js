@@ -27,7 +27,7 @@ const uppy = () => Uppy({
         ],
         browserBackButtonClose: true
     }).use(XHRUpload, {
-        endpoint: 'http://localhost:8080/api/v1/upload',
+        endpoint: 'https://phstore-api-jvyjoazqra-uc.a.run.app/api/v1/upload',
         formData: true,
         fieldName: 'image',
         headers: {'Transfer-Encoding': 'chunked'}
